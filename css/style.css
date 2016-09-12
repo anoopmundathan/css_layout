@@ -2,11 +2,23 @@
 	Base Element Styles
 ========================================= */
 
+* {
+	box-sizing: border-box;
+}
+
 body {
 	line-height: 1.6;
 }
 
+p:last-child {
+	margin-bottom: 0;
+}
+
 /* --- Layout Containers --- */
+
+.wrapper {
+	margin: 0;
+}
 
 .main-header {
 	background: #3acec2;
@@ -14,8 +26,8 @@ body {
 }
 
 .container {
-	width: 70%;
-	margin: 0 auto;
+	padding-left: 1em;
+	padding-right: 1em;
 }
 
 .main-footer {
@@ -30,3 +42,20 @@ body {
 	margin: 0;
 }
 
+/* ======================================
+	Media Query
+========================================= */
+
+@media (min-width: 700px) {
+
+	.wrapper {
+		min-height: calc(100vh - 73px);
+	}
+
+	.container {
+		width: 100%;
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+
+}
