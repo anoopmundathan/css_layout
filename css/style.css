@@ -54,6 +54,11 @@ a {
 	margin-bottom: 30px;
 }
 
+.image {
+	width: 150px;
+	height: 150px;
+	background: dodgerblue;
+}
 
 .main-footer {
 	text-align: center;
@@ -127,13 +132,13 @@ a {
 		margin-right: 50px;
 	}
 
-	.col {
-		width: 50%;
-		display: inline-block;
-		margin-left: -5px;
-		vertical-align: top;
-		padding-left: 1em;
-		padding-right: 1em;
+	.image {
+		float: left;
+		margin-top: 10px;
+		margin-right: 10px;
+		margin-bottom: 10px;
+		padding: 10px;
+		border: solid 1px red;
 	}
 
 }
