@@ -17,10 +17,6 @@ p {
 	margin-bottom: 1.5em;
 }
 
-p:last-child {
-	margin-bottom: 0;
-}
-
 h2,
 h3,
 a {
@@ -36,10 +32,6 @@ a {
 	text-decoration: none;
 }
 
-.name {
-	font-size: 1.25em;
-}
-
 /* ---- Layout Containers ---- */
 
 .container {
@@ -52,12 +44,6 @@ a {
 	padding-bottom: 1.5em;
 	background: #3acec2;
 	margin-bottom: 30px;
-}
-
-.image {
-	width: 150px;
-	height: 150px;
-	background: dodgerblue;
 }
 
 .main-footer {
@@ -81,6 +67,13 @@ a {
 	border-radius: 2px;
 }
 
+.name a,
+.main-nav a {
+	padding: 10px 15px;
+	text-align: center;
+	display: block;
+}
+
 .main-nav a {
 	font-size: .95em;
 	color: #3acec2;
@@ -91,12 +84,6 @@ a {
 	color: #093a58;
 }
 
-.name a,
-.main-nav a {
-	padding: 10px 15px;
-	display: block;
-}
-
 /* ======================================
 	Media Query
 ========================================= */
@@ -104,41 +91,57 @@ a {
 @media (min-width: 700px) {
 
 	.wrapper {
-		min-height: calc(100vh - 73px);
+		min-height: calc(100vh - 89px);
 	}
 
 	.container {
-		width: 100%;
-		max-width: 1000px;
+		width: 85%;
+		max-width: 1150px;
 		margin: 0 auto;
 	}
 
+	.main-nav {
+		float: right;
+	}
+
 	.name,
-	.main-nav,
 	.main-nav li {
-		display: inline-block;
+		float: left;
 	}
 
 	.main-nav li {
 		margin-left: 12px;
 	}
 
-	.main-header {
-		text-align: center;
-	}
+	/* ---- Columns ---- */
 
-	.name {
-		width: 240px;
-		margin-right: 50px;
-	}
-
-	.image {
+	.feat-img {
+		width: 300px;
 		float: left;
-		margin-top: 10px;
-		margin-right: 10px;
-		margin-bottom: 10px;
+		margin-top: 5px;
+		margin-right: 25px;
+		margin-bottom: 25px;
 		padding: 10px;
-		border: solid 1px red;
+		border: solid 1px #d9e4ea;
 	}
 
+	.primary {
+		width: 60%;
+	}
+	
+	.secondary {
+		width: 40%;
+	}
+
+	.col {
+		float: right;
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+
+	.clearfix::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
 }
