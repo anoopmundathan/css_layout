@@ -54,6 +54,7 @@ a {
 	margin-bottom: 30px;
 }
 
+
 .main-footer {
 	text-align: center;
 	padding: 2em 0;
@@ -90,6 +91,7 @@ a {
 	padding: 10px 15px;
 	display: block;
 }
+
 /* ======================================
 	Media Query
 ========================================= */
@@ -123,6 +125,15 @@ a {
 	.name {
 		width: 240px;
 		margin-right: 50px;
+	}
+
+	.col {
+		width: 50%;
+		display: inline-block;
+		margin-left: -5px;
+		vertical-align: top;
+		padding-left: 1em;
+		padding-right: 1em;
 	}
 
 }
