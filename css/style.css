@@ -32,35 +32,15 @@ a {
 	text-decoration: none;
 }
 
-/* ---- Layout Containers ---- */
-
-.container {
-	padding-left: 1em;
-	padding-right: 1em;
-}
-
-.main-header {
-	padding-top: 1.5em;
-	padding-bottom: 1.5em;
-	background: #3acec2;
-	margin-bottom: 30px;
-}
-
-.main-footer {
-	text-align: center;
-	padding: 2em 0;
-	background: #d9e4ea;
-}
-
 /* --- Navigation --- */
 
 .name {
 	font-size: 1.25em;
+	margin: 0;
 }
 
 .name,
 .main-nav li {
-	text-align: center;
 	background: #fff;
 	margin-top: 6px;
 	margin-bottom: 6px;
@@ -70,7 +50,6 @@ a {
 .name a,
 .main-nav a {
 	padding: 10px 15px;
-	text-align: center;
 	display: block;
 }
 
@@ -84,64 +63,122 @@ a {
 	color: #093a58;
 }
 
+/* ---- Layout Containers ---- */
+
+.container {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.main-header {
+	text-align: center;
+	background: #fff;
+}
+
+.main-footer {
+	padding: 2em 0;
+	background: #d9e4ea;
+	margin-top: 30px;
+}
+
+.banner,
+.main-footer {
+	text-align: center;
+}
+
+.banner {
+	color: #fff;
+	padding: 2em 0;
+	background-color: #3acec2;
+	margin-bottom: 60px;
+}
+
+.col {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+.logo {
+	width: 190px;
+}
+
+.headline {
+	margin-bottom: 0;
+}
+
+figure {
+	margin: 0;
+	line-height: 0;
+	position: relative;
+}
+
+figcaption {
+	font-size: .9em;
+	line-height: 1.5;
+	color: #fff;
+	padding: 1em;
+	background: rgba(19,43,102,.85);
+	position: absolute;
+
+	bottom: 0;
+	width: 100%;
+	height: 50%;
+}
 /* ======================================
 	Media Query
 ========================================= */
 
-@media (min-width: 700px) {
-
-	.wrapper {
-		min-height: calc(100vh - 89px);
-	}
+@media (min-width: 769px) {
 
 	.container {
-		width: 85%;
-		max-width: 1150px;
+		width: 90%;
 		margin: 0 auto;
+	}
+
+	.primary,
+	.secondary {
+		width: 50%;
+	}
+
+	.name,
+	.col {
+		float: left;
 	}
 
 	.main-nav {
 		float: right;
 	}
 
-	.name,
 	.main-nav li {
-		float: left;
+		display: inline-block;
+		margin-left: 15px;
 	}
 
-	.main-nav li {
-		margin-left: 12px;
+	.tagline {
+		font-size: 1.4em;
 	}
 
-	/* ---- Columns ---- */
-
-	.feat-img {
-		width: 300px;
-		float: left;
-		margin-top: 5px;
-		margin-right: 25px;
-		margin-bottom: 25px;
-		padding: 10px;
-		border: solid 1px #d9e4ea;
-	}
-
-	.primary {
-		width: 60%;
-	}
-	
-	.secondary {
-		width: 40%;
-	}
-
-	.col {
-		float: right;
-		padding-left: 1em;
-		padding-right: 1em;
-	}
 
 	.clearfix::after {
 		content: "";
 		display: table;
 		clear: both;
 	}
+}
+
+@media (min-width: 1025px) {
+	
+	.container {
+		width: 80%;
+		max-width: 1150px;
+	}
+
+	.primary {
+		width: 40%;
+	}
+
+	.secondary,
+	.third {
+		width: 30%;
+	}
+
 }
